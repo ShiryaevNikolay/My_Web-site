@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
 }
-/*
+
 div {
     box-sizing: border-box;
-} */
+}
 
 header {
     background-color: rgba(0, 0, 0, .5);
@@ -68,7 +68,7 @@ header a {
     height: 40px;
     background-image: url(img/Wj_4GyLil2o.jpg);
     background-repeat: no-repeat;
-    background-size: 40px;
+    background-size: 60px;
     background-position: top center;
     display: block;
     margin-left: 10px;
@@ -136,12 +136,25 @@ nav {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     min-height: 100vh;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    margin-top: 50px;
 }
-
+/*
 .grid__skill {
     padding: 5px;
     margin: 20px;
     background: #000;
     color: #fff;
     border-radius: 10px;
+}*/
+
+.grid__skill {
+    background: #000;
+    color:  #fff;
+    border-radius: 10px;
+}
+
+.skill_1 {
+    overflow: hidden;
 }
