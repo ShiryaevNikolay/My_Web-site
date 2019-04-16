@@ -22,6 +22,8 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    position: fixed;
+
 }
 
 header div {
@@ -42,6 +44,10 @@ header div {
     color: rgba(255,255,255,0.8);
     text-decoration: none;
     font-family: 'Jua', sans-serif;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 20px;
+    background-color: rgba(50, 50, 50, .5);
+    padding: 0 100px;
 }
 
 header a {
@@ -97,13 +103,13 @@ nav {
     display: block;
 }
 
-.container {
-    width: 1170px;
-    margin: 0 auto;
+#portfolio {
+    padding: 115px 0;
 }
 
-.title-my-skills {
-    padding-top: 115px;
+.container {
+    width: 65%;
+    margin: 0 auto;
 }
 
 .title-my-skills h2 {
@@ -132,29 +138,66 @@ nav {
 }
 
 .grid {
-    display: grid;
+    display: grid;  
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     min-height: 100vh;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
     margin-top: 50px;
+    padding-bottom: 100px;
 }
-/*
-.grid__skill {
-    padding: 5px;
-    margin: 20px;
-    background: #000;
-    color: #fff;
-    border-radius: 10px;
-}*/
+
+a {
+    text-decoration: none;
+}
 
 .grid__skill {
     background: #000;
     color:  #fff;
-    border-radius: 10px;
+    border-radius: 3%;
+}
+
+.skill_1, .skill_2, .skill_3, .skill_4 { 
+    height: 100%;
+    border-radius: 3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill_1 {
-    overflow: hidden;
+    background-image: url(img/high-level_language_1286.png);
 }
+
+.skill_2 {
+    background-image: url(img/DCPMv0CUAAEqmSW.jpg);
+}
+
+.skill_3 {
+    background-image: url(img/pemcils.jpg);
+}
+
+.skill_4 {
+    background-image: url(img/art.jpg);
+}
+
+.grid a {
+    font-size: 200%;
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        border-radius: 2%;
+    }
+
+    .grid__skill {
+        border-radius: 2%;
+    }
+}
+
