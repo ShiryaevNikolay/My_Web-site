@@ -77,7 +77,7 @@ header a {
     background-size: 60px;
     background-position: top center;
     display: block;
-    margin-left: 10px;
+    margin-left: -53px;
     margin-top: -32px;
     border-radius: 100%;
     border: 1px solid rgba(255,255,255,.8);
@@ -86,10 +86,8 @@ header a {
 .header__site-name {
     margin-top: -10px;
 }
-
 nav {
     float: right;
-    margin-top: -30px;
 }
 
 .menu {
@@ -103,13 +101,9 @@ nav {
     display: block;
 }
 
-.grid a:hover {
-    text-shadow: 0 0 10px #555;
-    transform: scale(1.03, 1.03);
-}
-
-#skills {
-    padding: 115px 0;
+section {
+    padding: 100px 0;
+    border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 .container {
@@ -143,24 +137,6 @@ h2 {
     z-index: -1;
 }
 
-.show-more {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-}
-
-.show-more p {
-    color: #777777;
-    font-size: 16px;
-    margin: 0;
-}
-
-.show-more a {
-    text-decoration: none;
-    font-size: 16px;
-    margin-left: 5px;
-}
-
 .grid {
     display: grid;  
     grid-template-columns: 1fr 1fr;
@@ -169,13 +145,24 @@ h2 {
     grid-column-gap: 5%;
     grid-row-gap: 5%;
     margin-top: 50px;
-    padding-bottom: 100px;
+}
+
+.grid__skill:hover {
+    transform: scale(1.03, 1.03);
+    box-shadow: none;
+}
+
+.skill_1:hover {
+    background-image: url(img/art_1.jpg);
+    
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     color: rgb(99, 99, 99);
 }
+
 
 a:hover {
     color: red;
@@ -185,6 +172,7 @@ a:hover {
     background: #000;
     color:  #fff;
     border-radius: 3%;
+    box-shadow: rgb(27, 27, 27) 0px 0px 25px 0px;
 }
 
 .skill_1, .skill_2, .skill_3, .skill_4 { 
@@ -218,16 +206,39 @@ a:hover {
     font-size: 350%;
 }
 
-@media (max-width: 1000px) {
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        border-radius: 2%;
-    }
+.show-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
 
-    .grid__skill {
-        border-radius: 2%;
-    }
+.show-more p {
+    color: #777777;
+    font-size: 16px;
+    margin: 0;
+}
+
+.show-more a {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.image-avatar {
+    width: 250px;
+    height: 250px;
+    background-image: url(img/Wj_4GyLil2o.jpg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: top center;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    margin: 50px auto; 
+    box-shadow: rgba(50, 50, 50, 0.5) 0px 0px 25px 0px;
+}
+
+.info-about-me {
+    font-size: 25px;
+    text-align: justify !important;
 }
 
 footer {
@@ -246,7 +257,6 @@ footer {
 
 #contacts a {
     margin: 0 10px;
-    display: flex;
 }
 
 .social {
@@ -265,7 +275,7 @@ footer {
 }
 
 .social a {
-    display: block;
+    display: inline-block;;
     width: 30px;
     height: 30px;
     background-size: cover;
@@ -279,3 +289,16 @@ footer {
 .telegram {
     background-image: url(img/telegram.svg);
 }
+
+/*
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        border-radius: 2%;
+    }
+
+    .grid__skill {
+        border-radius: 2%;
+    }
+}*/
