@@ -122,11 +122,11 @@ nav {
 
 section {
     padding: 100px 0;
-    border-bottom: 2px solid rgb(192, 192, 192);
+    border-bottom: 2px solid rgb(200, 200, 200);
 }
 
 .container {
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -216,7 +216,7 @@ h3 {
 a {
     display: inline-block;
     text-decoration: none;
-    color: rgb(99, 99, 99);
+    color: rgb(60, 60, 60);
 }
 
 a:hover {
@@ -260,6 +260,18 @@ a:hover {
 
 .grid a {
     font-size: 3rem;
+}
+
+#portfolio {
+    background-color: rgba(240, 240, 240);
+}
+
+#portfolio .line-decoration {
+    z-index: 0;
+}
+
+#portfolio h2 {
+    background-color: rgba(240, 240, 240);
 }
 
 .show-more {
@@ -383,4 +395,8 @@ footer {
 
 .telegram {
     background-image: url(img/telegram.svg);
+}
+
+footer {
+    background-color: rgba(240, 240, 240);
 }
