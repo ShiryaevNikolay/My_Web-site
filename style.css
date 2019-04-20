@@ -49,7 +49,6 @@ header div {
     color: rgba(255,255,255,0.8);
     text-decoration: none;
     font-family: 'Dosis', sans-serif;
-    /*border: 1px solid rgba(255,255,255,.8);*/
     border-radius: 20px;
     background-color: rgba(50, 50, 50, .5);
     box-shadow: 0 0 0 3px rgba(50, 50, 50,.5) inset, 0 0 0 4px white inset; 
@@ -185,11 +184,11 @@ h3 {
     color: white;
 }
 
-.skill_1:hover:before, .skill_2:hover:before, .skill_3:hover:before, .skill_4:hover:before {
+.grid div:hover:before {
     opacity: 0;
 }
 
-.skill_1:before, .skill_2:before, .skill_3:before, .skill_4:before {
+.grid div:before {
     border-radius: 3%;
     content: "";
     position: absolute;
@@ -231,7 +230,7 @@ a:hover {
     box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20);
 }
 
-.skill_1, .skill_2, .skill_3, .skill_4 { 
+.grid div { 
     border-radius: 3%;
     height: 100%;
     background-repeat: no-repeat;
@@ -260,7 +259,7 @@ a:hover {
 }
 
 .grid a {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .show-more {
@@ -295,7 +294,7 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.portfolio_1, .portfolio_2, .portfolio_3, .portfolio_4, .portfolio_5 {
+.list-portf a {
     background-color: #000;
     width: 200px;
     height: 200px;
@@ -305,6 +304,7 @@ a:hover {
     background-size: cover;
     background-position: top center;
     border-radius: 100%;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255) inset;
 }
 
 .portfolio_1 {
@@ -327,17 +327,14 @@ a:hover {
     background-image: url(img/portfolio_5.jpg);
 }
 
-.image-avatar {
+.title-about-me img {
+    display: block;
     width: 15rem;
     height: 15rem;
-    background-image: url(img/Wj_4GyLil2o.jpg);
-    background-repeat: no-repeat;
-    background-size: 160%;
-    background-position: top center;
     border-radius: 100%;
     border: 3px solid #fff;
-    margin: 70px auto; 
-    box-shadow: rgba(50, 50, 50, 0.5) 0px 0px 25px 0px;
+    margin: 70px auto;
+    box-shadow: rgba(50, 50, 50,.5) 0 0 25px 0;
 }
 
 .info-about-me {
@@ -359,7 +356,7 @@ footer {
 }
 
 .social li:hover {
-    margin-top: -5px;
+    margin-top: -3px;
 }
 
 .social ul {
