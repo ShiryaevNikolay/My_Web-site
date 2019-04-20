@@ -126,7 +126,7 @@ section {
 }
 
 .container {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -217,6 +217,7 @@ a {
     display: inline-block;
     text-decoration: none;
     color: rgb(60, 60, 60);
+    position: relative;
 }
 
 a:hover {
@@ -399,4 +400,27 @@ footer {
 
 footer {
     background-color: rgba(240, 240, 240);
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+.show-more a:before, .email-phone a:before {
+    content: "";
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    transition: .3s;
+}
+
+.show-more a:hover:before, .email-phone a:hover:before {
+    width: 100%;
+    left: 0;
 }
