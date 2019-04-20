@@ -9,7 +9,6 @@ div {
 }
 
 header {
-    background-color: rgba(0, 0, 0, .5);
     width: 100%;
     height: 50px;
     padding: 30px 70px;
@@ -22,7 +21,13 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 0 3px rgba(0, 0, 0, 0.20);
+    position: fixed; 
+    background-color: rgba(255,255,255,.95);
+}
 
+main {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 5px 5px rgba(0, 0, 0, 0.20);
 }
 
 header div {
@@ -33,39 +38,48 @@ header div {
     display: flex;
     width: 100%;
     height: 100vh;
-    background: url(img/freezydreamin-1491615-unsplash.jpg) no-repeat center top / cover;
+    background: url(img/Background.png) no-repeat center top / cover;
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
 }
 
 .main-img__name {
-    font-size: 6rem;
+    font-size: 6em;
     color: rgba(255,255,255,0.8);
     text-decoration: none;
-    font-family: 'Jua', sans-serif;
-    border: 1px solid rgba(255,255,255,.8);
+    font-family: 'Dosis', sans-serif;
+    /*border: 1px solid rgba(255,255,255,.8);*/
     border-radius: 20px;
     background-color: rgba(50, 50, 50, .5);
-    padding: 0 100px;
+    box-shadow: 0 0 0 3px rgba(50, 50, 50,.5) inset, 0 0 0 4px white inset; 
+    padding: 10px 90px;
+    letter-spacing: 0.5rem;
 }
 
 header a {
     font-size: 1rem;
     text-transform: uppercase;
-    color: rgba(255,255,255,.8);
     text-decoration: none;
     font-family: 'Fjalla One', sans-serif;
-    margin: 0 25px;
+    padding: 5px 20px;
+}
+
+header a:hover {
+    color: rgba(255,255,255);
+    background-color: rgba(50,50,50,.5);
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(50, 50, 50,.5) inset, 0 0 0 2px white inset;
 }
 
 .header__site-link {
-    margin-left: 64px;
+    margin: 5px 64px;
     font-size: 1rem;
     text-transform: uppercase;
-    color: rgba(255,255,255,.8);
     text-decoration: none;
     font-family: 'Fjalla One', sans-serif;
+    padding: 0;
+    display: inline-block;
 }
 
 .header__site-link:after {
@@ -81,11 +95,17 @@ header a {
     margin-top: -32px;
     border-radius: 100%;
     border: 1px solid rgba(255,255,255,.8);
+    box-shadow: rgba(50, 50, 50) 0px 0px 5px 0px;
 }
 
 .header__site-name {
-    margin-top: -10px;
+    margin-top: -15px;
 }
+
+.header__site-name a {
+    color: #333;
+}
+
 nav {
     float: right;
 }
@@ -103,7 +123,7 @@ nav {
 
 section {
     padding: 100px 0;
-    border-bottom: 1px solid rgb(192, 192, 192);
+    border-bottom: 2px solid rgb(192, 192, 192);
 }
 
 .container {
@@ -144,12 +164,25 @@ h2 {
     min-height: 100vh;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .grid__skill:hover {
-    transform: scale(1.03, 1.03);
+    transform: scale(1.05, 1.05);
     box-shadow: none;
+    border-radius: 3%;
+    overflow: hidden;
+    transition: .17s linear;
+}
+
+h3 {
+    z-index: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.grid a:hover {
+    font-size: 0;
+    color: white;
 }
 
 .skill_1:hover:before, .skill_2:hover:before, .skill_3:hover:before, .skill_4:hover:before {
@@ -157,12 +190,12 @@ h2 {
 }
 
 .skill_1:before, .skill_2:before, .skill_3:before, .skill_4:before {
+    border-radius: 3%;
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 3%;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .skill_1:hover {
@@ -187,27 +220,28 @@ a {
     color: rgb(99, 99, 99);
 }
 
-
 a:hover {
     color: red;
 }
 
 .grid__skill {
+    border-radius: 3%;
+    overflow: hidden;
     background: #000;
     color:  #fff;
-    border-radius: 3%;
-    box-shadow: rgb(27, 27, 27) 0px 0px 25px 0px;
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20);
 }
 
 .skill_1, .skill_2, .skill_3, .skill_4 { 
-    height: 100%;
     border-radius: 3%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 5px solid white;
 }
 
 .skill_1 {
@@ -227,7 +261,7 @@ a:hover {
 }
 
 .grid a {
-    font-size: 350%;
+    font-size: 4rem;
 }
 
 .show-more {
@@ -247,16 +281,22 @@ a:hover {
     margin-left: 5px;
 }
 
+
+
+
+
+
+
 .image-avatar {
-    width: 250px;
-    height: 250px;
+    width: 15rem;
+    height: 15rem;
     background-image: url(img/Wj_4GyLil2o.jpg);
     background-repeat: no-repeat;
     background-size: 160%;
     background-position: top center;
     border-radius: 100%;
     border: 3px solid #fff;
-    margin: 50px auto; 
+    margin: 70px auto; 
     box-shadow: rgba(50, 50, 50, 0.5) 0px 0px 25px 0px;
 }
 
@@ -267,7 +307,6 @@ a:hover {
 
 footer {
     padding: 70px 0;
-    border-top: 1px solid rgb(192, 192, 192);
 }
 
 #contacts a {
@@ -277,6 +316,10 @@ footer {
 .social {
     margin-top: -44px;
     float: right;
+}
+
+.social li:hover {
+    margin-top: -5px;
 }
 
 .social ul {
