@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,7 +27,7 @@ header {
     z-index: 1;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 0 3px rgba(0, 0, 0, 0.20);
     position: fixed; 
-    background-color: rgba(255,255,255,.95);
+    background-color: #fff;
 }
 
 main {
@@ -46,7 +50,7 @@ header div {
 
 .main-img__name {
     font-size: 6em;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255);
     text-decoration: none;
     font-family: 'Dosis', sans-serif;
     border-radius: 20px;
@@ -57,6 +61,7 @@ header div {
 }
 
 header a {
+    display: inline-block;
     font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -64,11 +69,22 @@ header a {
     padding: 5px 20px;
 }
 
-header a:hover {
-    color: rgba(255,255,255);
-    background-color: rgba(50,50,50,.5);
+header a:before {
+    content: "";
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgba(250,0,0,.5);
     border-radius: 10px;
-    box-shadow: 0 0 0 1px rgba(50, 50, 50,.5) inset, 0 0 0 2px white inset;
+    box-shadow: 0 0 0 1px rgba(250, 0, 0,.5) inset, 0 0 0 2px white inset;
+    transition: .3s;
+}
+
+header a:hover:before {
+    width: 100%;
+    left: 0;
 }
 
 .header__site-link {
@@ -121,8 +137,9 @@ nav {
 }
 
 section {
+    overflow: hidden;
     padding: 100px 0;
-    border-bottom: 2px solid rgb(192, 192, 192);
+    border-bottom: 2px solid rgb(200, 200, 200);
 }
 
 .container {
@@ -163,15 +180,7 @@ h2 {
     min-height: 100vh;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
-    margin-top: 70px;
-}
-
-.grid__skill:hover {
-    transform: scale(1.05, 1.05);
-    box-shadow: none;
-    border-radius: 3%;
-    overflow: hidden;
-    transition: .17s linear;
+    margin: 70px 0;
 }
 
 h3 {
@@ -184,10 +193,6 @@ h3 {
     color: white;
 }
 
-.grid div:hover:before {
-    opacity: 0;
-}
-
 .grid div:before {
     border-radius: 3%;
     content: "";
@@ -195,6 +200,10 @@ h3 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
+}
+
+.grid div:hover:before {
+    opacity: 0;
 }
 
 .skill_1:hover {
@@ -216,7 +225,8 @@ h3 {
 a {
     display: inline-block;
     text-decoration: none;
-    color: rgb(99, 99, 99);
+    color: rgb(60, 60, 60);
+    position: relative;
 }
 
 a:hover {
@@ -228,6 +238,14 @@ a:hover {
     border-radius: 3%;
     color:  #fff;
     box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20);
+    transition: .2s;
+}
+
+.grid__skill:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: none;
+    border-radius: 3%;
+    overflow: hidden;
 }
 
 .grid div { 
@@ -260,6 +278,18 @@ a:hover {
 
 .grid a {
     font-size: 3rem;
+}
+
+#portfolio {
+    background-color: rgba(240, 240, 240);
+}
+
+#portfolio .line-decoration {
+    z-index: 0;
+}
+
+#portfolio h2 {
+    background-color: rgba(240, 240, 240);
 }
 
 .show-more {
@@ -383,4 +413,31 @@ footer {
 
 .telegram {
     background-image: url(img/telegram.svg);
+}
+
+footer {
+    background-color: rgba(240, 240, 240);
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+.show-more a:before, .email-phone a:before {
+    content: "";
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    transition: .3s;
+}
+
+.show-more a:hover:before, .email-phone a:hover:before {
+    width: 100%;
+    left: 0;
 }
