@@ -52,8 +52,6 @@ $(document).ready(function () {
         var w_top = $(window).scrollTop();
         var e_top = $("#skills").offset().top;
 
-        console.log(w_top + "__" + e_top);
-
         if(e_top - w_top < 310) {
             $(".animate-1, .animate-2, .animate-3, .animate-4").css({
                 "transform": "translate(0)",
@@ -63,6 +61,25 @@ $(document).ready(function () {
 
             show = false;
         }
+    });
+
+    $(".grid__skill").mouseenter(function() {
+        $(this).css({
+            "transition": ".2s",
+            "transform": "scale(1.05, 1.05)",
+            "box-shadow": "none",
+            "border-radius": "3%",
+            "overflow": "hidden"
+        });
+    });
+    $(".grid__skill").mouseleave(function() {
+        $(this).css({
+            "transition": ".2s",
+            "transform": "scale(1, 1)",
+            "border-radius": "3%",
+            "overflow": "hidden",
+            "box-shadow": "0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20)"
+        });
     });
 
     var link = $(".menu-link");
