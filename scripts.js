@@ -22,15 +22,15 @@ $(document).ready(function () {
             "href": "#"
         },
         {
-            "class_a": "portfolio_6",
-            "href": "#"
+            "class_a_back": "portfolio_6",
+            "href": ""
         }
     ]
 
     $.each(portf, function (i, f) {
-        var portfolioItem = "<li><a href='" + f.href + "' class='" + f.class_a + "'></a></li>"; 
-        $(portfolioItem).appendTo(".list-portf"); 
-    });
+        var portfolioItem = "<li><a href='" + f.href + "' class='" + f.class_a + "'></a></li>";
+        $(portfolioItem).appendTo(".list-portf");
+   });
 
     $(".list-portf > li:last > a").replaceWith("<p></p>");
     $(".list-portf > li:last > p").css({
@@ -42,6 +42,27 @@ $(document).ready(function () {
         "position": "relative",
         "border-radius": "100%",
         "box-shadow": "0 0 0 2px rgba(255, 255, 255) inset"
+    });
+
+    var show = true;
+    $(window).on("scroll", function() {
+
+        if(!show) return false;
+
+        var w_top = $(window).scrollTop();
+        var e_top = $("#skills").offset().top;
+
+        console.log(w_top + "__" + e_top);
+
+        if(e_top - w_top < 310) {
+            $(".animate-1, .animate-2, .animate-3, .animate-4").css({
+                "transform": "translate(0)",
+                "opacity": "1",
+                "transition": "1s"
+            });
+
+            show = false;
+        }
     });
 
     var link = $(".menu-link");
