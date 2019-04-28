@@ -76,9 +76,7 @@ header a:before {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: rgba(250,0,0,.5);
-    border-radius: 10px;
-    box-shadow: 0 0 0 1px rgba(250, 0, 0,.5) inset, 0 0 0 2px white inset;
+    background-color: rgba(250, 0,0,.5);
     transition: .3s;
 }
 
@@ -238,11 +236,9 @@ a:hover {
     border-radius: 3%;
     color:  #fff;
     box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20);
-    transition: .2s;
 }
 
 .grid__skill:hover {
-    transform: scale(1.05, 1.05);
     box-shadow: none;
     border-radius: 3%;
     overflow: hidden;
@@ -325,7 +321,6 @@ a:hover {
 }
 
 .list-portf a {
-    background-color: #000;
     width: 200px;
     height: 200px;
     display: flex;
@@ -419,13 +414,6 @@ footer {
     background-color: rgba(240, 240, 240);
 }
 
-@media (max-width: 1000px) {
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-}
-
 .show-more a:before, .email-phone a:before {
     content: "";
     bottom: 0;
@@ -440,4 +428,148 @@ footer {
 .show-more a:hover:before, .email-phone a:hover:before {
     width: 100%;
     left: 0;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    header div {
+        letter-spacing: .6rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .menu-link {
+        z-index: 6;
+        display: block;
+        margin: -10px 0 0 0;
+        padding: 0;
+        float: right;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 100%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+    }
+    .menu-link:hover:before {
+        width: 0;
+    }
+    .menu-link span, .menu-link span:before, .menu-link span:after {
+        display: block;
+        height: 2px;
+        width: 18px;
+        position: absolute;
+        left: 50%;
+        margin-left: -9px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: #333;
+    }
+    .menu-link span:before {
+        transition: all .2s;
+        content: "";
+        margin-top: -6px;
+    }
+    .menu-link span:after {
+        transition: all .2s;
+        content: "";
+        margin-top: 4px;
+    }
+    .menu-link_active span {
+         background-color: transparent;
+    }
+    .menu-link_active span:before {
+        background-color: red;
+        transform: rotate(135deg);
+        margin-top: 0;
+    }
+    .menu-link_active span:after {
+        background-color: red;
+        transform: rotate(-135deg);
+        margin-top: 0;
+    }
+    nav {
+        background-color: #fff;
+        box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+        border-radius: 10px;
+        margin-right: 50px;
+        z-index: 6;
+        transition: all 0.5s;
+        margin-top: -540px;
+    }
+    .menu_active {
+        margin-top: 0;
+    }
+    .menu li {
+        float: none;
+        margin: 30px 0;
+        padding: 0 40px;
+        text-align: center;
+    }
+    .menu a { 
+        font-size: 30px;
+        padding: 20px 177px;
+    }
+}
+
+.list-portf a:before {
+    content: "More...";
+    bottom: 0;
+    border-radius: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 124, 124, 0.8);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255) inset;
+    color: #fff;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: .3s;
+}
+
+.list-portf a:hover:before {
+    transform: rotateY(0deg);
+}
+
+.mouse {
+    width: 45px;
+    height: 70px;
+    border: 2px solid rgba(255, 255, 255, .7);
+    background-color: rgba(50, 50, 50, .5);
+    box-shadow: 0 0 20px rgba(50, 50, 50);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.mouse:before {
+    content: "";
+    width: 10px;
+    height: 15px;
+    background: rgba(255, 255, 255, .7);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    animation: mouse-scroll 1.5s infinite;
+}
+
+@keyframes mouse-scroll {
+    100% {
+        opacity: 0;
+        top: 45px;
+    }
+}
+
+.animate-2, .animate-4 {
+    transform: translateX(90%);
+    opacity: 0;
+}
+.animate-1, .animate-3 {
+    transform: translateX(-90%);
+    opacity: 0;
 }

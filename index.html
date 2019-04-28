@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My_Web_Site</title>
+
+    <script src="jquery-3.4.0.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header__site-name">
-                <p href="#" class="header__site-link">Shiryaev Nikolay</p>
-                <nav>
+                <p class="header__site-link">Shiryaev Nikolay</p>
+                <a class="menu-link">
+                    <span></span>
+                </a>
+                <nav class="">
                     <ul class="menu">
                         <li>
                             <a href="#skills">Skills</a>
@@ -36,6 +44,7 @@
     <main>
         <div class="main-img">
             <h1 href="#" class="main-img__name">Programmer & Artist</h1>
+            <div class="mouse"></div>
         </div>
     </main>
     <section id="skills">
@@ -48,22 +57,22 @@
                 </div>
             </div>
             <div class="grid">
-                <a href="#" class="grid__skill">
+                <a href="#" class="grid__skill animate-1">
                     <div class="skill_1">
                         <h3>Programming</h3>
                     </div>
                 </a>
-                <a href="#" class="grid__skill">
+                <a href="#" class="grid__skill animate-2">
                     <div class="skill_2">
                         <h3>3D modeling</h3>
                     </div>
                 </a>
-                <a href="#" class="grid__skill">
+                <a href="#" class="grid__skill animate-3">
                     <div class="skill_3">
                         <h3>Drawing</h3>
                     </div>
                 </a>
-                <a href="#" class="grid__skill">
+                <a href="#" class="grid__skill animate-4">
                     <div class="skill_4">
                         <h3>CG</h3>
                     </div>
@@ -84,23 +93,7 @@
                         <a href="#">Show more...</a>
                     </div>
             </div>
-            <ul class="list-portf">
-                <li>
-                    <a href="#" class="portfolio_1"></a>
-                </li>
-                <li>
-                    <a href="#" class="portfolio_2"></a>
-                </li>
-                <li>
-                    <a href="#" class="portfolio_3"></a>
-                </li>
-                <li>
-                    <a href="#" class="portfolio_4"></a>
-                </li>
-                <li>
-                    <a href="#" class="portfolio_5"></a>
-                </li>
-            </ul>
+            <ul class="list-portf"></ul>
         </div>
     </section>
     <section id="about-me">
@@ -131,7 +124,7 @@
                 <div class="social">
                     <ul>
                         <li>
-                            <a href="#1234567890" class="vk"></a>
+                            <a href="https://vk.com/id266926982" class="vk"></a>
                         </li>
                         <li>
                             <a href="#user-name" class="telegram"></a>
