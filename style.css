@@ -315,21 +315,57 @@ a:hover {
 
 .list-portf li {
     display: inline-block;
+    width: 200px;
+    height: 200px;
     margin: 2% 5%;
-    border-radius: 100%;
+    border-radius: 25%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 5px 10px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    position: relative;
+    perspective: 1000px;
+    transition: 1s;
 }
 
 .list-portf a {
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    border-radius: 100%;
+    border-radius: 25%;
     box-shadow: 0 0 0 2px rgba(255, 255, 255) inset;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+
+.list-portf a:after {
+    content: "More...";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255) inset;
+    color: #fff;
+    font-size: 30px;
+    background-color: rgba(255, 124, 124);
+    transform: rotateY(180deg);
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.list-portf li:hover {
+    transform: rotateY(180deg);
+}
+.list-portf li:hover a {
+    transform: rotateY(180deg);
+}
+.list-portf li:hover a:after {
+    transform: rotateY(360deg);
 }
 
 .portfolio_1 {
@@ -515,6 +551,11 @@ footer {
     }
 }
 
+
+
+
+
+/*
 .list-portf a:before {
     content: "More...";
     bottom: 0;
@@ -532,7 +573,12 @@ footer {
 
 .list-portf a:hover:before {
     transform: rotateY(0deg);
-}
+}*/
+
+
+
+
+
 
 .mouse {
     width: 45px;

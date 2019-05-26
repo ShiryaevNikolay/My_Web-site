@@ -30,7 +30,7 @@ $(document).ready(function () {
     $.each(portf, function (i, f) {
         var portfolioItem = "<li><a href='" + f.href + "' class='" + f.class_a + "'></a></li>";
         $(portfolioItem).appendTo(".list-portf");
-   });
+    });
 
     $(".list-portf > li:last > a").replaceWith("<p></p>");
     $(".list-portf > li:last > p").css({
@@ -40,7 +40,7 @@ $(document).ready(function () {
         "height": "200px",
         "display": "flex",
         "position": "relative",
-        "border-radius": "100%",
+        "border-radius": "25%",
         "box-shadow": "0 0 0 2px rgba(255, 255, 255) inset"
     });
 
