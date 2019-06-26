@@ -25,7 +25,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.20), 0 0 10px rgba(0, 0, 0, 0.20);
     position: fixed; 
     background-color: #fff;
@@ -139,6 +139,7 @@ section {
 
 #skills{
     box-shadow: 0 0px 50px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(60deg, rgb(248, 248, 248) 50%, rgb(255, 255, 255) 50%);
 }
 
 .container {
@@ -153,6 +154,7 @@ h2 {
     margin: 0;
     padding: 0 15px;
     background-color: #fff;
+    z-index: 1;
 }
 
 .line-decoration {
@@ -169,7 +171,7 @@ h2 {
     background-color: #000;
     position: absolute;
     top: calc(50% - 2px);
-    z-index: -1;
+    z-index: 0;
 }
 
 .grid {
@@ -194,18 +196,6 @@ h3 {
     color: white;
 }
 
-.grid div:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.grid div:hover:before {
-    opacity: 0;
-}
-
 .skill_1:hover {
     background-image: url(img/language_not-blur.jpg);
 }
@@ -223,6 +213,7 @@ h3 {
 }
 
 a {
+    outline: none;
     display: inline-block;
     text-decoration: none;
     color: rgb(60, 60, 60);
@@ -252,6 +243,10 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(1);
+}
+.grid a:hover div{
+    filter: none;
 }
 
 .skill_1 {
@@ -276,6 +271,7 @@ a:hover {
 
 #portfolio {
     background-color: rgba(240, 240, 240);
+    background: linear-gradient(60deg, rgb(235, 235, 235) 50%, rgba(240, 240, 240) 50%);
 }
 
 #portfolio .line-decoration {
@@ -375,6 +371,10 @@ a:hover {
     background-image: url(img/portfolio_5.jpg);
 }
 
+#about-me{
+    background: linear-gradient(60deg, rgb(248, 248, 248) 50%, rgb(255, 255, 255) 50%);
+}
+
 .title-about-me img {
     display: block;
     width: 15rem;
@@ -392,6 +392,7 @@ a:hover {
 
 footer {
     padding: 70px 0;
+    background: linear-gradient(60deg, rgb(235, 235, 235) 50%, rgba(240, 240, 240) 50%);
 }
 
 #contacts a {
@@ -423,16 +424,21 @@ footer {
     height: 30px;
     background-size: cover;
     background-position: left center;
+    filter: grayscale(1);
 }
 
 .vk {
     background-image: url(img/vk.svg);
 }
-
+.vk:hover{
+    filter: saturate(150%);
+}
 .telegram {
     background-image: url(img/telegram.svg);
 }
-
+.telegram:hover{
+    filter: saturate(150%);
+}
 footer {
     background-color: rgba(240, 240, 240);
 }
