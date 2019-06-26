@@ -30,7 +30,7 @@ $(document).ready(function () {
     $.each(portf, function (i, f) {
         var portfolioItem = "<li><a href='" + f.href + "' class='" + f.class_a + "'></a></li>";
         $(portfolioItem).appendTo(".list-portf");
-   });
+    });
 
     $(".list-portf > li:last > a").replaceWith("<p></p>");
     $(".list-portf > li:last > p").css({
@@ -40,7 +40,7 @@ $(document).ready(function () {
         "height": "200px",
         "display": "flex",
         "position": "relative",
-        "border-radius": "100%",
+        "border-radius": "25%",
         "box-shadow": "0 0 0 2px rgba(255, 255, 255) inset"
     });
 
@@ -66,19 +66,16 @@ $(document).ready(function () {
     $(".grid__skill").mouseenter(function() {
         $(this).css({
             "transition": ".2s",
-            "transform": "scale(1.05, 1.05)",
+            "padding": "2%",
             "box-shadow": "none",
-            "border-radius": "3%",
             "overflow": "hidden"
         });
     });
     $(".grid__skill").mouseleave(function() {
         $(this).css({
             "transition": ".2s",
-            "transform": "scale(1, 1)",
-            "border-radius": "3%",
-            "overflow": "hidden",
-            "box-shadow": "0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20)"
+            "padding": "0",
+            "overflow": "hidden"
         });
     });
 
