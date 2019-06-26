@@ -66,19 +66,16 @@ $(document).ready(function () {
     $(".grid__skill").mouseenter(function() {
         $(this).css({
             "transition": ".2s",
-            "transform": "scale(1.05, 1.05)",
+            "padding": "2%",
             "box-shadow": "none",
-            "border-radius": "3%",
             "overflow": "hidden"
         });
     });
     $(".grid__skill").mouseleave(function() {
         $(this).css({
             "transition": ".2s",
-            "transform": "scale(1, 1)",
-            "border-radius": "3%",
-            "overflow": "hidden",
-            "box-shadow": "0 0 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 0, 0, 0.20)"
+            "padding": "0",
+            "overflow": "hidden"
         });
     });
 
