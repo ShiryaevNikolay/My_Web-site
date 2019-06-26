@@ -47,12 +47,12 @@ header div {
 
 .main-img__name {
     font-size: 5em;
-    color: rgba(255,255,255);
+    color: rgb(32, 32, 32);
     text-decoration: none;
     font-family: 'Dosis', sans-serif;
     border-radius: 15px;
-    background-color: rgba(50, 50, 50, .5);
-    box-shadow: 0 0 0 3px rgba(50, 50, 50,.5) inset, 0 0 0 4px white inset; 
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 0 2px rgb(255, 255, 255, 1) inset, 0 0 0 4px rgb(0, 0, 0) inset; 
     padding: 10px 90px;
     letter-spacing: 0.5rem;
 }
@@ -541,9 +541,9 @@ footer {
 .mouse {
     width: 45px;
     height: 70px;
-    border: 2px solid rgba(255, 255, 255, .7);
-    background-color: rgba(50, 50, 50, .5);
-    box-shadow: 0 0 20px rgba(50, 50, 50);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
     border-radius: 20px;
     position: absolute;
     bottom: 20px;
@@ -553,7 +553,7 @@ footer {
     content: "";
     width: 10px;
     height: 15px;
-    background: rgba(255, 255, 255, .7);
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 10px;
     left: 50%;
