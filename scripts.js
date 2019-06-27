@@ -66,7 +66,7 @@ $(document).ready(function () {
     $(".grid__skill").mouseenter(function() {
         $(this).css({
             "transition": ".2s",
-            "padding": "2%",
+            "padding": "2.5%",
             "box-shadow": "none",
             "overflow": "hidden"
         });

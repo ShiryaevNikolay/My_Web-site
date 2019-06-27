@@ -190,26 +190,17 @@ h3 {
     text-decoration: underline;
 }
 
+.grid a {
+    font-size: 2.8em;
+    box-sizing: border-box;
+}
 .grid a:hover {
     border: 1px dashed #000000;
-    font-size: 0;
+    font-size: 3em;
     color: white;
 }
-
-.skill_1:hover {
-    background-image: url(img/language_not-blur.jpg);
-}
-
-.skill_2:hover {
-    background-image: url(img/car_not-blur.jpg);
-}
-
-.skill_3:hover {
-    background-image: url(img/pencilc_not-blur.jpg);
-}
-
-.skill_4:hover {
-    background-image: url(img/art_1.jpg);
+.grid a:hover h3{
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 a {
@@ -250,7 +241,7 @@ a:hover {
 }
 
 .skill_1 {
-    background-image: url(img/html.jpg);
+    background-image: url(img/programming.svg);
 }
 
 .skill_2 {
@@ -258,15 +249,11 @@ a:hover {
 }
 
 .skill_3 {
-    background-image: url(img/pemcils.jpg);
+    background-image: url(img/drawing.svg);
 }
 
 .skill_4 {
     background-image: url(img/art.jpg);
-}
-
-.grid a {
-    font-size: 3em;
 }
 
 #portfolio {
