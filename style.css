@@ -389,10 +389,6 @@ footer {
     float: right;
 }
 
-.social li:hover {
-    margin-top: -3px;
-}
-
 .social ul {
     margin: 0;
     display: flex;
@@ -411,18 +407,17 @@ footer {
     background-position: left center;
     filter: grayscale(1);
 }
-
+.social a:hover{
+    filter: saturate(150%);
+}
 .vk {
     background-image: url(img/vk.svg);
-}
-.vk:hover{
-    filter: saturate(150%);
 }
 .telegram {
     background-image: url(img/telegram.svg);
 }
-.telegram:hover{
-    filter: saturate(150%);
+.github{
+    background-image: url(img/github.svg);
 }
 footer {
     background-color: rgba(240, 240, 240);
